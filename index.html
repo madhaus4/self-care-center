@@ -5,7 +5,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-  
+    <section class="login-page hidden" id="loginPage"></section>
+    <main class="main-page" id="mainPage">
+      <header>
+        <h1 class="page-title">✨ Self Care Center ✨</h1>
+      </header>
+      <section>
+        <form class="container-1" id="container1">
+          <h2 class="type-of-message">Which type of message?</h2>
+          <div class="selection">
+            <input id="affirmation" type="radio" name="message" value ="affirmation">
+            <label for="affirmation">affirmation</label>
+          </div>
+          <div class="selection">
+            <input id="mantra" type="radio" name="message" value="mantra">
+            <label for="mantra">mantra</label>
+          </div>
+          <button class="get-msg-btn" type="button">Receive Message</button>
+        </form>
+        <article class="container-2" id="containter2">
+          <img class="meditate-logo" id="meditateLogo" src="assets/meditate.svg" alt="meditate logo">
+          <p class="statement-goes-here hidden" id="statementHere"></p>
+        </article>
+      </section>
+    </main>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="data.js"></script>
   </body>
 </html>
