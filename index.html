@@ -13,15 +13,17 @@
       <section>
         <h2 class="type-of-message">Which type of message?</h2>
         <form class="select-message" id="selectMessage">
-          <div class="selection">
-            <input id="affirmation" type="radio" name="message" value ="affirmation">
-            <label for="affirmation">affirmation</label>
+          <div class="select-one">
+            <div class="selection affirmation">
+              <input id="affirmation" type="radio" name="message" value ="affirmation">
+              <label for="affirmation">affirmation</label>
+            </div>
+            <div class="selection mantra">
+              <input id="mantra" type="radio" name="message" value="mantra">
+              <label for="mantra">mantra</label>
+            </div>
           </div>
-          <div class="selection">
-            <input id="mantra" type="radio" name="message" value="mantra">
-            <label for="mantra">mantra</label>
-          </div>
-          <button class="get-msg-btn" type="button">Receive Message</button>
+          <button class="get-message-btn" type="button">Receive Message</button>
         </form>
         <article class="show-message" id="showMessage">
           <img class="meditate-logo" id="meditateLogo" src="assets/meditate.svg" alt="meditate logo">
