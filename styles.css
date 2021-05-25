@@ -21,33 +21,83 @@ body {
   margin: 0;
 }
 
+/* ENTIRE LOGIN PAGE */
+
+/* ENTIRE MAIN PAGE */
 .main-page {
   height: 75vh;
   width: 75vw;
 }
 
+header {
+  padding: .25em;
+  margin: 1em;
+}
+
 .page-title {
   color: #ffffff;
+  padding: .5em;
+  margin: 1em;
 }
 
 section {
   display: flex;
+  padding: .5em;
+  margin-top: 1em;
 }
 
+/* FIRST BOX */
 .type-of-message {
   color: #ffffff;
+  font-size: 1.25em;
+  margin: .25em 1em;
 }
 
 .select-message {
+  display: flex;
+  justify-content: space-between;
   background: #ffffff;
   border-radius: .5em;
   /* height: 15vh;
   width: 30vw; */
-  height: 5em;
-  width: 30em;
+  height: 6em;
+  width: 32em;
   margin-bottom: 3em;
 }
 
+.select-one {
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90%;
+  padding: .25em;
+  margin: .75em 1em .25em 1em;
+}
+
+.selection {
+  flex-direction: row;
+  justify-content: space-between;
+  font-style: italic;
+}
+
+.affirmation {
+  width: 25%;
+}
+
+.mantra {
+  width: 20%;
+}
+
+.get-message-btn {
+  color: #ffffff;
+  font-size: .95em;
+  background: #134d71;
+  border: none;
+  border-radius: .35em;
+  padding: .25em 2em;
+  margin: .25em 1em .75em 1em;
+}
+
+/* SECOND BOX */
 .show-message {
   background: #ffffff;
   border-radius: .5em;
