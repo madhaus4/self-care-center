@@ -6,3 +6,66 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+* {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #134d71, #78a7c6, #f7e4bf);
+  height: 100vh;
+  width: auto;
+  margin: 0;
+}
+
+.main-page {
+  height: 75vh;
+  width: 75vw;
+}
+
+.page-title {
+  color: #ffffff;
+}
+
+section {
+  display: flex;
+}
+
+.type-of-message {
+  color: #ffffff;
+}
+
+.select-message {
+  background: #ffffff;
+  border-radius: .5em;
+  /* height: 15vh;
+  width: 30vw; */
+  height: 5em;
+  width: 30em;
+  margin-bottom: 3em;
+}
+
+.show-message {
+  background: #ffffff;
+  border-radius: .5em;
+  /* height: 25vh;
+  width: 50vw; */
+  height: 8em;
+  width: 45em;
+}
+
+.meditate-logo {
+  /* height: 12vh;
+  width: 12vw; */
+  height: 4em;
+  width: 4em;
+  padding: 1em;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
