@@ -110,6 +110,16 @@ section {
   margin: auto;
 }
 
+.statement-goes-here {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.25em;
+  padding: 1em;
+  margin: auto;
+}
+
 .hidden {
   display: none;
 }
