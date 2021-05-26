@@ -58,8 +58,6 @@ section {
   justify-content: space-between;
   background: #ffffff;
   border-radius: .5em;
-  /* height: 15vh;
-  width: 30vw; */
   height: 6em;
   width: 32em;
   margin-bottom: 3em;
@@ -98,20 +96,26 @@ section {
 }
 
 /* SECOND BOX */
-.show-message {
+.message-box {
   background: #ffffff;
   border-radius: .5em;
-  /* height: 25vh;
-  width: 50vw; */
   height: 8em;
   width: 45em;
 }
 
-.meditate-logo {
-  /* height: 12vh;
-  width: 12vw; */
+.meditate-icon {
   height: 4em;
   width: 4em;
+  padding: 1em;
+  margin: auto;
+}
+
+.statement-goes-here {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.25em;
   padding: 1em;
   margin: auto;
 }
