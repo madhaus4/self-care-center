@@ -15,13 +15,14 @@ function getRandomIndex(array) {
 }
 
 function renderMessage() {
+  meditateIcon.classList.add('hidden');
+  showMessage.classList.remove('hidden');
   var affirmationOption = affirmations[getRandomIndex(affirmations)];
   var mantraOption = mantras[getRandomIndex(mantras)];
 
-  messageBox.innerHTML = '';
   if (chooseAffirmation.checked) {
-    messageBox.innerHTML = affirmationOption;
+    showMessage.innerText = affirmationOption;
   } else if (chooseMantra.checked) {
-    messageBox.innerHTML = mantraOption;
+    showMessage.innerText = mantraOption;
   }
 }
