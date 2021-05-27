@@ -15,6 +15,7 @@ black - #000000;
 }
 
 body {
+  display: flex;
   background: linear-gradient(to bottom, #134d71, #78a7c6, #f7e4bf);
   height: 100vh;
   width: auto;
@@ -22,6 +23,21 @@ body {
 }
 
 /* ENTIRE LOGIN PAGE */
+.login-page {
+  display: flex;
+  background: #ffffff;
+  border-radius: .5em;
+  height: auto;
+  width: 40em;
+  padding: 3em;
+  margin: 4em;
+}
+
+.title-on-login {
+  color: #134d71;
+  padding: .5em;
+  margin: 1em;
+}
 
 /* ENTIRE MAIN PAGE */
 .main-page {
@@ -29,7 +45,7 @@ body {
   width: 75vw;
 }
 
-header {
+.main-page-header {
   padding: .25em;
   margin: 1em;
 }
@@ -85,7 +101,8 @@ section {
   width: 20%;
 }
 
-.get-message-btn {
+.get-message-btn,
+.lets-go-btn {
   color: #ffffff;
   font-size: .95em;
   background: #134d71;
