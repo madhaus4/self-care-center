@@ -8,7 +8,14 @@ var showMessage = document.querySelector('#statementHere');
 var messageBox = document.querySelector('#messageBox');
 var getMessageBtn = document.querySelector('#getMessageBtn');
 
+var mainPage = document.querySelector('#mainPage');
+var loginPage = document.querySelector('#loginPage');
+var userInput = document.querySelector('#userName');
+var letsGoBtn = document.querySelector('#letsGoBtn');
+
+// window.addEventListener('load', renderLoginPage);
 getMessageBtn.addEventListener('click', renderMessage);
+letsGoBtn.addEventListener('click', renderMainPage);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -25,6 +32,11 @@ function renderMessage() {
   } else if (chooseMantra.checked) {
     showMessage.innerText = mantraOption;
   }
+}
+
+function renderMainPage() {
+  loginPage.classList.add('hidden');
+  mainPage.classList.remove('hidden');
 }
 
 // LOGIN PAGE
