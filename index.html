@@ -6,8 +6,18 @@
   </head>
   <body>
     <main>
-      <section class="login-page hidden" id="loginPage"></section>
-      <section class="main-page" id="mainPage">
+      <section class="login-page" id="loginPage">
+        <header>
+          <h2>Welcome to</h2>
+          <h1 class="page-title">✨ Self Care Center ✨</h1>
+        </header>
+        <form>
+          <label for="name">Enter your name to continue</label>
+          <input id="userName" type="text" name="name" required maxlength="20">
+          <button>Let's go!</button>
+        </form>
+      </section>
+      <section class="main-page hidden" id="mainPage">
         <header>
           <h1 class="page-title">✨ Self Care Center ✨</h1>
           <h2 class="user-greeting hidden" id="userGreeting">Hello, Maria!</h2>
