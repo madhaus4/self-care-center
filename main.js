@@ -27,7 +27,7 @@ function renderMessage() {
 
   if (!chooseAffirmation.checked && !chooseMantra.checked) {
     event.preventDefault(getMessageBtn);
-  } 
+  }
   if (chooseAffirmation.checked) {
     showMessage.innerText = affirmationOption;
     meditateIcon.classList.add('hidden');
@@ -48,25 +48,6 @@ function renderMainPage() {
 
 function prevent(event) {
   if (!userName.value) {
-    event.preventDefault(event);
+    event.preventDefault(letsGoBtn);
   }
 }
-
-// LOGIN PAGE
-// task1 >> refactor application so user lands on a 'login' page
-// task2 >> the login page needs to match style of application
-// task3 >> the login page should contain an input for a user to enter their name and a submit button
-
-// task4 >> after the user clicks the submit button, they are taken to the main page of the application where they will see a personalized greeting that displays their name and a welcome message
-// task5 >> the welcome message & name should appear in a logical place
-
-  // write HTML for loginPage
-  // work through CSS for it as well
-  // am i gonna hide/show in HTML or use .innerHTML to show code
-  // make addEventListener for window on page load
-
-  // create QS for loginPage, input field, & button
-  // add event addEventListener for button 'click'
-  // create function to respond the button click and bring the user to the main page
-    // view mainPage / hide loginPage
-    // display user name to mainPage ???
