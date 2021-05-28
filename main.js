@@ -22,20 +22,25 @@ function getRandomIndex(array) {
 }
 
 function renderMessage() {
-  meditateIcon.classList.add('hidden');
-  showMessage.classList.remove('hidden');
   var affirmationOption = affirmations[getRandomIndex(affirmations)];
   var mantraOption = mantras[getRandomIndex(mantras)];
 
+  if (!chooseAffirmation.checked && !chooseMantra.checked) {
+    event.preventDefault(getMessageBtn);
+  } 
   if (chooseAffirmation.checked) {
     showMessage.innerText = affirmationOption;
+    meditateIcon.classList.add('hidden');
+    showMessage.classList.remove('hidden');
   } else if (chooseMantra.checked) {
     showMessage.innerText = mantraOption;
+    meditateIcon.classList.add('hidden');
+    showMessage.classList.remove('hidden');
   }
 }
 
 function renderMainPage() {
-  prevent();
+  prevent(letsGoBtn);
   loginPage.classList.add('hidden');
   mainPage.classList.remove('hidden');
   userGreeting.innerText = `Hello ${userName.value}!  Hope you're having a great day!`;
@@ -43,7 +48,7 @@ function renderMainPage() {
 
 function prevent(event) {
   if (!userName.value) {
-    event.preventDefault();
+    event.preventDefault(event);
   }
 }
 
