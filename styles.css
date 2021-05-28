@@ -93,6 +93,7 @@ h2 {
 .user-greeting {
   padding: .5em;
   margin-bottom: .5em;
+  font-weight: bold;
 }
 
 /* FIRST BOX */
@@ -110,6 +111,11 @@ h2 {
   height: 6em;
   width: 32em;
   margin-bottom: 3em;
+}
+
+.select-message:hover {
+  box-shadow: 0 0 50px 0 #f7e4bf;
+  border: .015em solid gray;
 }
 
 .select-one {
@@ -155,6 +161,11 @@ h2 {
   border-radius: .5em;
   height: 8em;
   width: 45em;
+}
+
+.message-box:hover {
+  box-shadow: 0 0 50px 0 #f7e4bf;
+  border: .015em solid gray;
 }
 
 .meditate-icon {

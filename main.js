@@ -43,7 +43,7 @@ function renderMainPage() {
   prevent(letsGoBtn);
   loginPage.classList.add('hidden');
   mainPage.classList.remove('hidden');
-  userGreeting.innerText = `Hello ${userName.value}!  Hope you're having a great day!`;
+  userGreeting.innerText = `Hey there ${userName.value}!  Hope you're having a great day!`;
 }
 
 function prevent(event) {
