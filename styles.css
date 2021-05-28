@@ -121,8 +121,7 @@ h2 {
   width: 20%;
 }
 
-.get-message-btn,
-.lets-go-btn {
+.btn {
   color: #ffffff;
   font-size: .95em;
   background: #134d71;
@@ -130,6 +129,11 @@ h2 {
   border-radius: .35em;
   padding: .25em 2em;
   margin: .25em 1em .75em 1em;
+}
+
+.btn:hover {
+  background: #f7e4bf;
+  color: black;
 }
 
 /* SECOND BOX */
