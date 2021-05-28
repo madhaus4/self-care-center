@@ -24,6 +24,13 @@ function getRandomIndex(array) {
 
 // *** make show & hide functions
     // will be cleaner!!
+function show(element) {
+  element.classList.remove('hidden');
+}
+function hide(element) {
+  element.classList.add('hidden');
+}
+
 
 // make this into at least 2!!! functions.
 // what goes where???
@@ -38,10 +45,14 @@ function renderMessage() {
     showMessage.innerText = affirmationOption;
     meditateIcon.classList.add('hidden');
     showMessage.classList.remove('hidden');
+    // hide(meditateIcon);
+    // show(showMessage);
   } else if (chooseMantra.checked) {
     showMessage.innerText = mantraOption;
     meditateIcon.classList.add('hidden');
     showMessage.classList.remove('hidden');
+    // hide(meditateIcon);
+    // show(showMessage);
   }
 }
 
@@ -49,6 +60,8 @@ function renderMainPage() {
   prevent(letsGoBtn);
   loginPage.classList.add('hidden');
   mainPage.classList.remove('hidden');
+  // hide(loginPage);
+  // show(mainPage);
   userGreeting.innerText = `Hey there ${userName.value}!  Hope you're having a great day!`;
 }
 
@@ -61,4 +74,48 @@ function prevent(event) {
 // ********EXTRA
     // can I use Date() or whatever to make a more dynamic welcome message for user?!  probs >> how??
     // do I even want that as the welcome message
-          // >>response to self: unsure what I want this to be at the moment
+        // >>response to self: unsure what I want this to be at the moment
+
+    // SOLID IDEA -- can I make the login Page btn work when user presses 'enter btn' on keyboard as an addition
+        // found this on the internet: WTF
+          // (document).keypress(function(e){
+          //   if (e.which == 13){
+          //     $("#userName").click();
+          //   }
+          // });
+          //
+                // can I make a keydown event instead of this
+                // https://css-tricks.com/snippets/javascript/javascript-keycodes/
+// can i write someting like --
+  // document.addEventListener('keydown' or 'keypress', call both functions/ or do I use an anonymous function)
+
+      // do I have to store userName.value somewhere in JS if I add 'submit' as an attribute
+
+
+      // document.getElementById('name').addEventListener('keypress', function(event) {
+      //     if (event.keyCode == 13) {
+      //       event.preventDefault();
+      //     }
+      //   });
+
+
+   //    ("#txtInput").on('keyup', function (event) {
+   //    if (event.keyCode === 13) {
+   //       console.log("Enter key pressed!!!!!");
+   //    }
+   // });
+
+
+//    var input = document.getElementById("myInput");
+// input.addEventListener("keyup", function(event) {
+//     if (event.keyCode === 13) {
+//         event.preventDefault();
+//         document.getElementById("myBtn").click();
+//     }
+// });
+
+
+              // OK DONE NOW.
+
+    // CSS -- do I want to add a cool curser anywhere?
+        // >>note to self: this is UNNECESSARY
