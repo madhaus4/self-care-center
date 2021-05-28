@@ -39,6 +39,11 @@ section {
   margin: 4em;
 }
 
+.login-page:hover {
+  box-shadow: 0 0 50px 0 #f7e4bf;
+  border: .015em solid gray;
+}
+
 .login-page-header {
   padding: .5em;
   margin: .5em;
@@ -63,6 +68,14 @@ h2 {
 
 .name-field {
   padding: .5em;
+}
+
+.name-here {
+  border: 0 solid;
+  border-bottom: 1px solid;
+  outline: none;
+  text-align: center;
+  font-size: 22px;
 }
 
 /* ENTIRE MAIN PAGE */
