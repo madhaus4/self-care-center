@@ -1,6 +1,7 @@
 // ** think data model vs DOM **
 // ** remember SRP **
 
+// did I use all of these QS??????????
 var chooseAffirmation = document.querySelector('#affirmation');
 var chooseMantra = document.querySelector('#mantra');
 var meditateIcon = document.querySelector('#meditateIcon');
@@ -21,6 +22,11 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
+// *** make show & hide functions
+    // will be cleaner!!
+
+// make this into at least 2!!! functions.
+// what goes where???
 function renderMessage() {
   var affirmationOption = affirmations[getRandomIndex(affirmations)];
   var mantraOption = mantras[getRandomIndex(mantras)];
@@ -51,3 +57,8 @@ function prevent(event) {
     event.preventDefault(letsGoBtn);
   }
 }
+
+// ********EXTRA
+    // can I use Date() or whatever to make a more dynamic welcome message for user?!  probs >> how??
+    // do I even want that as the welcome message
+          // >>response to self: unsure what I want this to be at the moment
