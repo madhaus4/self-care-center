@@ -39,6 +39,11 @@ section {
   margin: 4em;
 }
 
+.login-page:hover {
+  box-shadow: 0 0 50px 0 #f7e4bf;
+  border: .015em solid gray;
+}
+
 .login-page-header {
   padding: .5em;
   margin: .5em;
@@ -65,6 +70,14 @@ h2 {
   padding: .5em;
 }
 
+.name-here {
+  border: 0 solid;
+  border-bottom: 1px solid;
+  outline: none;
+  text-align: center;
+  font-size: 22px;
+}
+
 /* ENTIRE MAIN PAGE */
 .main-page-header {
   padding: .25em;
@@ -80,6 +93,7 @@ h2 {
 .user-greeting {
   padding: .5em;
   margin-bottom: .5em;
+  font-weight: bold;
 }
 
 /* FIRST BOX */
@@ -97,6 +111,11 @@ h2 {
   height: 6em;
   width: 32em;
   margin-bottom: 3em;
+}
+
+.select-message:hover {
+  box-shadow: 0 0 50px 0 #f7e4bf;
+  border: .015em solid gray;
 }
 
 .select-one {
@@ -121,8 +140,7 @@ h2 {
   width: 20%;
 }
 
-.get-message-btn,
-.lets-go-btn {
+.btn {
   color: #ffffff;
   font-size: .95em;
   background: #134d71;
@@ -132,12 +150,22 @@ h2 {
   margin: .25em 1em .75em 1em;
 }
 
+.btn:hover {
+  background: #f7e4bf;
+  color: black;
+}
+
 /* SECOND BOX */
 .message-box {
   background: #ffffff;
   border-radius: .5em;
   height: 8em;
   width: 45em;
+}
+
+.message-box:hover {
+  box-shadow: 0 0 50px 0 #f7e4bf;
+  border: .015em solid gray;
 }
 
 .meditate-icon {
