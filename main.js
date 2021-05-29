@@ -31,9 +31,19 @@ function hide(element) {
   element.classList.add('hidden');
 }
 
+// var messageType;
 
 // make this into at least 2!!! functions.
 // what goes where???
+// function typeOfMessage() {
+//   if (chooseAffirmation.checked) {
+//     messageType = affirmation;
+//   } else if (chooseMantra.checked) {
+//     messageType = mantra;
+//   }
+// }
+
+
 function renderMessage() {
   var affirmationOption = affirmations[getRandomIndex(affirmations)];
   var mantraOption = mantras[getRandomIndex(mantras)];
@@ -43,25 +53,19 @@ function renderMessage() {
   }
   if (chooseAffirmation.checked) {
     showMessage.innerText = affirmationOption;
-    meditateIcon.classList.add('hidden');
-    showMessage.classList.remove('hidden');
-    // hide(meditateIcon);
-    // show(showMessage);
+    hide(meditateIcon);
+    show(showMessage);
   } else if (chooseMantra.checked) {
     showMessage.innerText = mantraOption;
-    meditateIcon.classList.add('hidden');
-    showMessage.classList.remove('hidden');
-    // hide(meditateIcon);
-    // show(showMessage);
+    hide(meditateIcon);
+    show(showMessage);
   }
 }
 
 function renderMainPage() {
   prevent(letsGoBtn);
-  loginPage.classList.add('hidden');
-  mainPage.classList.remove('hidden');
-  // hide(loginPage);
-  // show(mainPage);
+  hide(loginPage);
+  show(mainPage);
   userGreeting.innerText = `Hey there ${userName.value}!  Hope you're having a great day!`;
 }
 
