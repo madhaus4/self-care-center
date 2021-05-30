@@ -1,24 +1,40 @@
-// ** think data model vs DOM **
-// ** remember SRP **
-
 var chooseAffirmation = document.querySelector('#affirmation');
 var chooseMantra = document.querySelector('#mantra');
 var meditateIcon = document.querySelector('#meditateIcon');
-var showMessage = document.querySelector('#statementHere');
-var messageBox = document.querySelector('#messageBox');
-var getMessageBtn = document.querySelector('#getMessageBtn');
-
 var mainPage = document.querySelector('#mainPage');
 var loginPage = document.querySelector('#loginPage');
 var userName = document.querySelector('#userName');
-var letsGoBtn = document.querySelector('#letsGoBtn');
 var userGreeting = document.querySelector('#userGreeting');
+var showMessage = document.querySelector('#statementHere');
+var getMessageBtn = document.querySelector('#getMessageBtn');
+var letsGoBtn = document.querySelector('#letsGoBtn');
+
+var messageType;
 
 getMessageBtn.addEventListener('click', renderMessage);
 letsGoBtn.addEventListener('click', renderMainPage);
 
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
+}
+
+function show(element) {
+  element.classList.remove('hidden');
+}
+
+function hide(element) {
+  element.classList.add('hidden');
+}
+
+function renderMainPage() {
+  if (userName.value) {
+    letsGoBtn.disabled = false;
+    hide(loginPage);
+    show(mainPage);
+    userGreeting.innerText = `Hey there ${userName.value}!  Hope you're having a great day!`;
+  }
+  return;
 }
 
 function renderMessage() {
@@ -29,25 +45,15 @@ function renderMessage() {
     event.preventDefault(getMessageBtn);
   }
   if (chooseAffirmation.checked) {
-    showMessage.innerText = affirmationOption;
-    meditateIcon.classList.add('hidden');
-    showMessage.classList.remove('hidden');
+    displayMessage(affirmationOption);
   } else if (chooseMantra.checked) {
-    showMessage.innerText = mantraOption;
-    meditateIcon.classList.add('hidden');
-    showMessage.classList.remove('hidden');
+    displayMessage(mantraOption);
   }
 }
 
-function renderMainPage() {
-  prevent(letsGoBtn);
-  loginPage.classList.add('hidden');
-  mainPage.classList.remove('hidden');
-  userGreeting.innerText = `Hey there ${userName.value}!  Hope you're having a great day!`;
-}
-
-function prevent(event) {
-  if (!userName.value) {
-    event.preventDefault(letsGoBtn);
-  }
+function displayMessage(message) {
+  messageType = message;
+  showMessage.innerText = messageType;
+  hide(meditateIcon);
+  show(showMessage);
 }
