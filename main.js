@@ -22,8 +22,6 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-// *** make show & hide functions
-    // will be cleaner!!
 function show(element) {
   element.classList.remove('hidden');
 }
@@ -31,18 +29,7 @@ function hide(element) {
   element.classList.add('hidden');
 }
 
-// var messageType;
-
-// make this into at least 2!!! functions.
-// what goes where???
-// function typeOfMessage() {
-//   if (chooseAffirmation.checked) {
-//     messageType = affirmation;
-//   } else if (chooseMantra.checked) {
-//     messageType = mantra;
-//   }
-// }
-
+var messageType;
 
 function renderMessage() {
   var affirmationOption = affirmations[getRandomIndex(affirmations)];
@@ -52,27 +39,27 @@ function renderMessage() {
     event.preventDefault(getMessageBtn);
   }
   if (chooseAffirmation.checked) {
-    showMessage.innerText = affirmationOption;
-    hide(meditateIcon);
-    show(showMessage);
+    displayMessage(affirmationOption)
   } else if (chooseMantra.checked) {
-    showMessage.innerText = mantraOption;
-    hide(meditateIcon);
-    show(showMessage);
+    displayMessage(mantraOption)
   }
+}
+
+function displayMessage(message) {
+  messageType = message;
+  showMessage.innerText = messageType;
+  hide(meditateIcon);
+  show(showMessage);
 }
 
 function renderMainPage() {
-  prevent(letsGoBtn);
-  hide(loginPage);
-  show(mainPage);
-  userGreeting.innerText = `Hey there ${userName.value}!  Hope you're having a great day!`;
-}
-
-function prevent(event) {
-  if (!userName.value) {
-    event.preventDefault(letsGoBtn);
+  if (userName.value) {
+    letsGoBtn.disabled = false;
+    hide(loginPage);
+    show(mainPage);
+    userGreeting.innerText = `Hey there ${userName.value}!  Hope you're having a great day!`;
   }
+  return;
 }
 
 // ********EXTRA
