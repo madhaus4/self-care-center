@@ -16,6 +16,7 @@ This project is a website where the user is able to receive a positive message o
 ### Future Additions
 - Add the capability for the user to favorite messages
 - The functionality of using the 'enter' key on keyboard 
+- Add dynamic functionality for the page greeting to user
 
 ## [Check it Out](https://madhaus4.github.io/self-care-center/)
 
