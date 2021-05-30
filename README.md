@@ -19,8 +19,8 @@ This project is a website where the user is able to receive a positive message o
 - Add dynamic functionality for the page greeting to user
 
 ## [Check it Out](https://madhaus4.github.io/self-care-center/)
-
+![recording (2)](https://user-images.githubusercontent.com/76507607/120114878-6f0a2100-c13e-11eb-9ebd-8c7e15a341c2.gif)
 
 ******************************
-#### Contributors:
+#### Contributor:
 [Maria DelSignore](https://github.com/madhaus4)
