@@ -2,7 +2,6 @@ var chooseAffirmation = document.querySelector('#affirmation');
 var chooseMantra = document.querySelector('#mantra');
 var meditateIcon = document.querySelector('#meditateIcon');
 var showMessage = document.querySelector('#statementHere');
-var messageBox = document.querySelector('#messageBox');
 var getMessageBtn = document.querySelector('#getMessageBtn');
 
 var mainPage = document.querySelector('#mainPage');
@@ -10,6 +9,8 @@ var loginPage = document.querySelector('#loginPage');
 var userName = document.querySelector('#userName');
 var letsGoBtn = document.querySelector('#letsGoBtn');
 var userGreeting = document.querySelector('#userGreeting');
+
+var messageType;
 
 getMessageBtn.addEventListener('click', renderMessage);
 letsGoBtn.addEventListener('click', renderMainPage);
@@ -21,11 +22,11 @@ function getRandomIndex(array) {
 function show(element) {
   element.classList.remove('hidden');
 }
+
 function hide(element) {
   element.classList.add('hidden');
 }
 
-var messageType;
 
 function renderMessage() {
   var affirmationOption = affirmations[getRandomIndex(affirmations)];
@@ -35,9 +36,9 @@ function renderMessage() {
     event.preventDefault(getMessageBtn);
   }
   if (chooseAffirmation.checked) {
-    displayMessage(affirmationOption)
+    displayMessage(affirmationOption);
   } else if (chooseMantra.checked) {
-    displayMessage(mantraOption)
+    displayMessage(mantraOption);
   }
 }
 
