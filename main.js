@@ -1,19 +1,19 @@
 var chooseAffirmation = document.querySelector('#affirmation');
 var chooseMantra = document.querySelector('#mantra');
 var meditateIcon = document.querySelector('#meditateIcon');
-var showMessage = document.querySelector('#statementHere');
-var getMessageBtn = document.querySelector('#getMessageBtn');
-
 var mainPage = document.querySelector('#mainPage');
 var loginPage = document.querySelector('#loginPage');
 var userName = document.querySelector('#userName');
-var letsGoBtn = document.querySelector('#letsGoBtn');
 var userGreeting = document.querySelector('#userGreeting');
+var showMessage = document.querySelector('#statementHere');
+var getMessageBtn = document.querySelector('#getMessageBtn');
+var letsGoBtn = document.querySelector('#letsGoBtn');
 
 var messageType;
 
 getMessageBtn.addEventListener('click', renderMessage);
 letsGoBtn.addEventListener('click', renderMainPage);
+
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -27,6 +27,15 @@ function hide(element) {
   element.classList.add('hidden');
 }
 
+function renderMainPage() {
+  if (userName.value) {
+    letsGoBtn.disabled = false;
+    hide(loginPage);
+    show(mainPage);
+    userGreeting.innerText = `Hey there ${userName.value}!  Hope you're having a great day!`;
+  }
+  return;
+}
 
 function renderMessage() {
   var affirmationOption = affirmations[getRandomIndex(affirmations)];
@@ -47,14 +56,4 @@ function displayMessage(message) {
   showMessage.innerText = messageType;
   hide(meditateIcon);
   show(showMessage);
-}
-
-function renderMainPage() {
-  if (userName.value) {
-    letsGoBtn.disabled = false;
-    hide(loginPage);
-    show(mainPage);
-    userGreeting.innerText = `Hey there ${userName.value}!  Hope you're having a great day!`;
-  }
-  return;
 }
