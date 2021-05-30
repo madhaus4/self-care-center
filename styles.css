@@ -22,15 +22,8 @@ body {
   margin: 0;
 }
 
-section {
-  display: flex;
-  padding: .5em;
-  margin-top: 1em;
-}
-
 /* ENTIRE LOGIN PAGE */
 .login-page {
-  display: flex;
   background: #ffffff;
   border-radius: .5em;
   height: auto;
@@ -176,7 +169,6 @@ h2 {
 }
 
 .statement-goes-here {
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
