@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>self care center</title>
+</head>
+
+<body>
     <main>
-      <section class="login-page" id="loginPage">
-        <header class="login-page-header">
-          <h2>Welcome to</h2>
-          <h1 class="title-on-login">✨ Self Care Center ✨</h1>
-        </header>
-        <form class="your-name-plz">
-          <label class="name-field" for="name">Enter your name to continue</label>
-          <input class="name-here" id="userName" type="text submit" name="name" required maxlength="20" autocomplete="off">
-        </form>
-        <button class="lets-go-btn btn" id="letsGoBtn" type="button" diabled>Let's go!</button>
-      </section>
-      <section class="main-page hidden" id="mainPage">
-        <header class="main-page-header">
-          <h1 class="page-title">✨ Self Care Center ✨</h1>
-          <h2 class="user-greeting" id="userGreeting"></h2>
-        </header>
-        <article>
-          <h3 class="type-of-message">Which type of message?</h3>
-          <form class="select-message" id="selectMessage">
-            <div class="select-one">
-              <div class="selection affirmation">
-                <input id="affirmation" type="radio" name="message" value ="affirmation">
-                <label for="affirmation">affirmation</label>
-              </div>
-              <div class="selection mantra">
-                <input id="mantra" type="radio" name="message" value="mantra">
-                <label for="mantra">mantra</label>
-              </div>
-            </div>
-            <button class="get-message-btn btn" id="getMessageBtn" type="button">Receive Message</button>
-          </form>
-          <article class="message-box">
-            <img class="meditate-icon" id="meditateIcon" src="assets/meditate.svg" alt="meditate icon">
-            <p class="statement-goes-here hidden" id="statementHere"></p>
-          </article>
-        </article>
-      </section>
+        <section class="login-page" id="loginPage">
+            <header class="login-page-header">
+                <h2>Welcome to</h2>
+                <h1 class="title-on-login">✨ Self Care Center ✨</h1>
+            </header>
+            <form class="your-name-plz">
+                <label class="name-field" for="name">Enter your name to continue</label>
+                <input class="name-here" id="userName" type="text submit" name="name" required maxlength="20" autocomplete="off">
+            </form>
+            <button class="lets-go-btn btn" id="letsGoBtn" type="button" diabled>Let's go!</button>
+        </section>
+        <section class="main-page hidden" id="mainPage">
+            <header class="main-page-header">
+                <h1 class="page-title">✨ Self Care Center ✨</h1>
+                <h2 class="user-greeting" id="userGreeting"></h2>
+            </header>
+            <article>
+                <h3 class="type-of-message">Which type of message?</h3>
+                <form class="select-message" id="selectMessage">
+                    <div class="select-one">
+                        <div class="selection affirmation">
+                            <input id="affirmation" type="radio" name="message" value="affirmation">
+                            <label for="affirmation">affirmation</label>
+                        </div>
+                        <div class="selection mantra">
+                            <input id="mantra" type="radio" name="message" value="mantra">
+                            <label for="mantra">mantra</label>
+                        </div>
+                    </div>
+                    <button class="get-message-btn btn" id="getMessageBtn" type="button">Receive Message</button>
+                </form>
+                <article class="message-box">
+                    <img class="meditate-icon" id="meditateIcon" src="assets/meditate.svg" alt="meditate icon">
+                    <p class="statement-goes-here hidden" id="statementHere"></p>
+                </article>
+            </article>
+        </section>
     </main>
-    <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="data.js"></script>
-  </body>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
 </html>
